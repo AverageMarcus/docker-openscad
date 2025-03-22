@@ -5,6 +5,7 @@ FROM jlesage/baseimage-gui:ubuntu-24.04-v4.7.1
   # Setup dirs and files
   RUN mkdir -p /home/openscad
   RUN echo "#!/bin/sh\nexec openscad" > /startapp.sh
+  RUN chmod +x /startapp.sh
 
   # Internal env vars
   ENV APP_NAME="OpenSCAD"
